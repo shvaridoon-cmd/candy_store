@@ -54,6 +54,22 @@ document.getElementById("enter-btn").addEventListener("click", () => {
     document.getElementById("main-site").classList.remove("hidden");
 });
 
+function createFloatingSparkle() {
+    const sparkle = document.createElement("img");
+    sparkle.src = "images/sparkles/tumblr_3f04a478cf7d4a1bf94deb490eb97d70_d045f57f_400.webp";
+    sparkle.classList.add("sparkle");
+
+    sparkle.style.left = Math.random() * window.innerWidth + "px";
+    sparkle.style.top = Math.random() * window.innerHeight + "px";
+
+    document.body.appendChild(sparkle);
+
+    setTimeout(() => sparkle.remove(), 6000);
+}
+
+setInterval(createFloatingSparkle, 800);
+
+
 
 const welcomeScreen = document.getElementById("welcome-screen");
 const mainSite = document.getElementById("main-site");
