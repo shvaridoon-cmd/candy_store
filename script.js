@@ -49,6 +49,28 @@ const data = {
   ],
 };
 
+function playAffirmationsTTS(times = 10) {
+    let count = 0;
+
+    function speakNext() {
+        if (count < times) {
+            const utterance = new SpeechSynthesisUtterance(affirmationsText);
+            utterance.rate = 1;      // speed
+            utterance.pitch = 1;     // tone
+            utterance.volume = 1;    // loudness
+
+            utterance.onend = () => {
+                count++;
+                speakNext();
+            };
+
+            speechSynthesis.speak(utterance);
+        }
+    }
+
+    speakNext();
+}
+
 document.getElementById("enter-btn").addEventListener("click", () => {
     document.getElementById("welcome-screen").classList.add("hidden");
     document.getElementById("main-site").classList.remove("hidden");
