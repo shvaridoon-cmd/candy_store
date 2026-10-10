@@ -12,60 +12,24 @@
     font-family: "BabyDoll";
     src: url("fonts/Baby Doll.otf") format("opentype");
 }
+
 #welcome-screen h1 {
     font-family: "CatPaw";
 }
+
 h2, h3, h4 {
     font-family: "Tempting";
 }
+
 body, p, li, button {
     font-family: "BabyDoll";
-}
-#welcome-screen {
-    background: url("images/welcome-bg.gif") repeat center center fixed;
-    background-size: cover;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.hidden {
-    display: none;
-}
-
-
-/* style.css */
-body {
-  background: var(--bg-main);
-  color: var(--text-main);
-}
-
-.order-type-btn {
-  background: var(--button-bg);
-  border: 2px solid var(--button-border);
-  color: var(--text-main);
-}
-
-.item-card {
-  background: var(--bg-secondary);
-  border: 1px solid var(--accent);
-}
-
-#detail-box {
-  background: var(--bg-secondary);
-  border: 2px solid var(--accent);
-}
-
-/* Hide helper */
-.hidden {
-  display: none;
 }
 
 /* Welcome screen */
 #welcome-screen {
+  background: url("images/welcome-bg.gif") repeat center center fixed;
+  background-size: cover;
+  width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -74,7 +38,12 @@ body {
   text-align: center;
 }
 
-#enter-btn {
+.hidden {
+  display: none;
+}
+
+/* Enter button */
+#enterBtn {
   margin-top: 20px;
   padding: 12px 24px;
   border-radius: 999px;
@@ -86,7 +55,7 @@ body {
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-#enter-btn:hover {
+#enterBtn:hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px #ffffff;
 }
@@ -121,7 +90,6 @@ body {
   box-shadow: 0 0 18px #ff8ad4;
 }
 
-/* Sparkle effect (simple) */
 .order-type-btn::after {
   content: "✨";
   position: absolute;
@@ -170,4 +138,3 @@ body {
   color: #000000;
   cursor: pointer;
 }
-
