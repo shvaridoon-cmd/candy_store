@@ -225,6 +225,17 @@ function showDetail(item) {
   detailBox.classList.remove("hidden");
 }
 
+const customImageInput = document.getElementById("custom-image");
+const customPreview = document.getElementById("custom-preview");
+
+customImageInput.addEventListener("change", () => {
+  const file = customImageInput.files[0];
+  if (file) {
+    customPreview.src = URL.createObjectURL(file);
+    customPreview.classList.remove("hidden");
+  }
+});
+
 // Order button
 orderBtn.addEventListener("click", () => {
   playClickSound();
