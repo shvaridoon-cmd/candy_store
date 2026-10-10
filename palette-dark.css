@@ -1,9 +1,8 @@
 :root {
-  --bg-main: #0b0b0f;        /* deep black/navy */
-  --bg-secondary: #1a1a22;  /* dark grey */
-  --accent: #c0c0c0;        /* chrome silver */
-  --text-main: #ffffff;     /* white */
-  --text-soft: #d6d6d6;     /* soft grey */
+  --bg-main: #000000;          /* pure black */
+  --bg-secondary: #111111;     /* soft black */
+  --text-main: #ffebff;        /* soft pink-white */
+  --accent: #ff8ad4;           /* your sparkle pink */
   --button-bg: #111111;
-  --button-border: #888888;
+  --button-border: #ff8ad4;
 }
