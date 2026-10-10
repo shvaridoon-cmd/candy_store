@@ -74,7 +74,7 @@ function playAffirmationsTTS(times = 10) {
     speakNext();
 }
 
-}
+
 
 document.getElementById("enter-btn").addEventListener("click", () => {
     document.getElementById("welcome-screen").classList.add("hidden");
