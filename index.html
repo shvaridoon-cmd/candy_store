@@ -20,7 +20,7 @@
     </div>
 
     <!-- Main Site -->
-    <div id="main-site" class="hidden">
+    <div id="main-site" class="hidden fade">
         <h2>choose your order type</h2>
 
         <div class="order-types">
@@ -39,27 +39,24 @@
         <div id="items-list"></div>
 
         <!-- Detail Box -->
-     <!-- Detail Box -->
-<div id="detail-box" class="hidden">
-    <h3 id="detail-title"></h3>
+        <div id="detail-box" class="hidden">
+            <h3 id="detail-title"></h3>
 
-    <!-- Normal items -->
-    <p id="detail-contents"></p>
-    <p id="detail-price"></p>
-    <ul id="detail-affirmations"></ul>
+            <!-- Normal items -->
+            <p id="detail-contents"></p>
+            <p id="detail-price"></p>
+            <ul id="detail-affirmations"></ul>
 
-    <!-- Custom order fields -->
-    <div id="custom-fields" class="hidden">
-        <textarea id="custom-text" placeholder="Write your desire here..."></textarea>
+            <!-- Custom order fields -->
+            <div id="custom-fields" class="hidden">
+                <textarea id="custom-text" placeholder="Write your desire here..."></textarea>
+                <input type="file" id="custom-image" accept="image/*">
+                <img id="custom-preview" class="hidden" />
+            </div>
 
-        <input type="file" id="custom-image" accept="image/*">
-
-        <img id="custom-preview" class="hidden" />
+            <button id="order-btn">order ✨</button>
+        </div>
     </div>
-
-    <button id="order-btn">order ✨</button>
-</div>
-
 
     <!-- Background Music -->
     <audio id="bg-music" src="music/background.mp3" loop></audio>
@@ -67,7 +64,7 @@
     <!-- Click Sound -->
     <audio id="click-sound" src="sounds/click.mp3"></audio>
 
-    <!-- Affirmation Audio (optional, not used by TTS but kept for future use) -->
+    <!-- Optional affirmation loop -->
     <audio id="affirmation-audio" src="music/affirmation-loop.mp3" loop></audio>
 
     <!-- Main Script -->
