@@ -225,6 +225,19 @@ function showDetail(item) {
   detailBox.classList.remove("hidden");
 }
 
+
+enterBtn.addEventListener("click", () => {
+  welcomeScreen.classList.add("hidden");
+  mainSite.classList.add("fade");
+
+  setTimeout(() => {
+    mainSite.classList.add("show");
+  }, 50);
+
+  bgMusic.play();
+  playClickSound();
+});
+
 const customImageInput = document.getElementById("custom-image");
 const customPreview = document.getElementById("custom-preview");
 
