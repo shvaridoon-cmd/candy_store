@@ -39,14 +39,27 @@
         <div id="items-list"></div>
 
         <!-- Detail Box -->
-        <div id="detail-box" class="hidden">
-            <h3 id="detail-title"></h3>
-            <p id="detail-contents"></p>
-            <p id="detail-price"></p>
-            <ul id="detail-affirmations"></ul>
-            <button id="order-btn">order ✨</button>
-        </div>
+     <!-- Detail Box -->
+<div id="detail-box" class="hidden">
+    <h3 id="detail-title"></h3>
+
+    <!-- Normal items -->
+    <p id="detail-contents"></p>
+    <p id="detail-price"></p>
+    <ul id="detail-affirmations"></ul>
+
+    <!-- Custom order fields -->
+    <div id="custom-fields" class="hidden">
+        <textarea id="custom-text" placeholder="Write your desire here..."></textarea>
+
+        <input type="file" id="custom-image" accept="image/*">
+
+        <img id="custom-preview" class="hidden" />
     </div>
+
+    <button id="order-btn">order ✨</button>
+</div>
+
 
     <!-- Background Music -->
     <audio id="bg-music" src="music/background.mp3" loop></audio>
