@@ -1,3 +1,4 @@
+/* FONTS */
 @font-face {
     font-family: "CatPaw";
     src: url("fonts/Cat paw.ttf") format("truetype");
@@ -13,6 +14,7 @@
     src: url("fonts/Baby Doll.otf") format("opentype");
 }
 
+/* TYPOGRAPHY */
 #welcome-screen h1 {
     font-family: "CatPaw";
 }
@@ -21,153 +23,168 @@ h2, h3, h4 {
     font-family: "Tempting";
 }
 
-body, p, li, button {
+body, p, li, button, textarea {
     font-family: "BabyDoll";
 }
 
-/* Welcome screen */
-#welcome-screen {
-  background: url("images/welcome-bg.gif") repeat center center fixed;
-  background-size: cover;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+/* GLOBAL */
+body {
+    background: var(--bg-main);
+    color: var(--text-main);
+    margin: 0;
+    padding: 0;
 }
 
 .hidden {
-  display: none;
+    display: none;
 }
 
-/* Enter button */
-#enterBtn {
-  margin-top: 20px;
-  padding: 12px 24px;
-  border-radius: 999px;
-  border: 2px solid #ff8ad4;
-  background: #000000;
-  color: #ffebff;
-  cursor: pointer;
-  box-shadow: 0 0 12px #ff8ad4;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-#enterBtn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #ffffff;
-}
-
-/* Main site */
-#main-site {
-  padding: 30px;
-}
-
-/* Order type buttons */
-.order-types {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 24px;
-}
-
-#custom-text {
-  width: 100%;
-  height: 120px;
-  padding: 10px;
-  border-radius: 12px;
-  background: #111;
-  color: #ffebff;
-  border: 2px solid #ff8ad4;
-  margin-bottom: 12px;
-}
-
-#custom-image {
-  margin-bottom: 12px;
-}
-
-#custom-preview {
-  width: 100%;
-  max-height: 240px;
-  object-fit: cover;
-  border-radius: 12px;
-  border: 2px solid #ff8ad4;
-  margin-top: 12px;
-}
-
-.order-type-btn {
-  flex: 1;
-  padding: 16px;
-  border-radius: 18px;
-  border: 2px solid #ff8ad4;
-  background: #111111;
-  color: #ffebff;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.order-type-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 18px #ff8ad4;
-}
-
-.order-type-btn::after {
-  content: "✨";
-  position: absolute;
-  right: 10px;
-  top: 8px;
-  opacity: 0.7;
-}
-
-/* Items list */
-#items-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 12px;
-}
-
-.item-card {
-  padding: 12px;
-  border-radius: 14px;
-  background: #1a1a1a;
-  border: 1px solid #ff8ad4;
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.item-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 12px #ffffff;
-}
-
+/* FADE TRANSITION */
 .fade {
-  opacity: 0;
-  transition: opacity 0.8s ease;
+    opacity: 0;
+    transition: opacity 0.8s ease;
 }
 
 .fade.show {
-  opacity: 1;
+    opacity: 1;
 }
 
-/* Detail box */
+/* WELCOME SCREEN */
+#welcome-screen {
+    background: url("images/welcome-bg.gif") repeat center center fixed;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* ENTER BUTTON */
+#enterBtn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    border-radius: 999px;
+    border: 2px solid #ff8ad4;
+    background: #000;
+    color: #ffebff;
+    cursor: pointer;
+    box-shadow: 0 0 12px #ff8ad4;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#enterBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ffffff;
+}
+
+/* MAIN SITE */
+#main-site {
+    padding: 30px;
+}
+
+/* ORDER TYPE BUTTONS */
+.order-types {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.order-type-btn {
+    flex: 1;
+    padding: 16px;
+    border-radius: 18px;
+    border: 2px solid #ff8ad4;
+    background: #111;
+    color: #ffebff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.order-type-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 18px #ff8ad4;
+}
+
+.order-type-btn::after {
+    content: "✨";
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    opacity: 0.7;
+}
+
+/* ITEMS LIST */
+#items-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+}
+
+.item-card {
+    padding: 12px;
+    border-radius: 14px;
+    background: #1a1a1a;
+    border: 1px solid #ff8ad4;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.item-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 12px #ffffff;
+}
+
+/* DETAIL BOX */
 #detail-box {
-  margin-top: 24px;
-  padding: 18px;
-  border-radius: 18px;
-  background: #000000;
-  border: 2px solid #ff8ad4;
-  box-shadow: 0 0 20px #ff8ad4;
+    margin-top: 24px;
+    padding: 18px;
+    border-radius: 18px;
+    background: #000;
+    border: 2px solid #ff8ad4;
+    box-shadow: 0 0 20px #ff8ad4;
 }
 
+/* CUSTOM ORDER FIELDS */
+#custom-fields {
+    margin-top: 16px;
+}
+
+#custom-text {
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+    border-radius: 12px;
+    background: #111;
+    color: #ffebff;
+    border: 2px solid #ff8ad4;
+    margin-bottom: 12px;
+}
+
+#custom-image {
+    margin-bottom: 12px;
+}
+
+#custom-preview {
+    width: 100%;
+    max-height: 240px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #ff8ad4;
+    margin-top: 12px;
+}
+
+/* ORDER BUTTON */
 #order-btn {
-  margin-top: 12px;
-  padding: 10px 20px;
-  border-radius: 999px;
-  border: none;
-  background: #ff8ad4;
-  color: #000000;
-  cursor: pointer;
+    margin-top: 12px;
+    padding: 10px 20px;
+    border-radius: 999px;
+    border: none;
+    background: #ff8ad4;
+    color: #000;
+    cursor: pointer;
 }
