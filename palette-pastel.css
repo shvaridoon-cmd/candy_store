@@ -1,1 +1,9 @@
-
+:root {
+  --bg-main: #ffeef7;        /* baby pink */
+  --bg-secondary: #e3f4ff;  /* baby blue */
+  --accent: #c8ffd9;        /* mint */
+  --text-main: #5a5a5a;     /* soft grey */
+  --text-soft: #7a7a7a;
+  --button-bg: #ffffff;
+  --button-border: #ffb7e5; /* pastel pink */
+}
