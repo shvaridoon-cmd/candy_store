@@ -215,6 +215,13 @@ function showDetail(item) {
     detailAffirmations.appendChild(li);
   });
 
+  // If custom order, show custom fields
+  if (item.name === "Custom manifestation") {
+    document.getElementById("custom-fields").classList.remove("hidden");
+  } else {
+    document.getElementById("custom-fields").classList.add("hidden");
+  }
+
   detailBox.classList.remove("hidden");
 }
 
