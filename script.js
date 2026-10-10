@@ -239,6 +239,21 @@ customImageInput.addEventListener("change", () => {
 // Order button
 orderBtn.addEventListener("click", () => {
   playClickSound();
+
+  if (detailTitle.textContent === "Custom manifestation") {
+    const text = document.getElementById("custom-text").value;
+    const img = customImageInput.files[0];
+
+    if (!text && !img) {
+      alert("Please write your desire or upload an image ✨");
+      return;
+    }
+
+    alert("Your custom manifestation has been placed ✨");
+    playAffirmationsTTS(10);
+    return;
+  }
+
   alert("Order placed in the manifestation universe ✨");
   playAffirmationsTTS(10);
 });
