@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>whateveryouwantwehave</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Background music -->
+  <audio id="bg-music" src="music/background.mp3" loop></audio>
+
+  <!-- Cute click sound -->
+  <audio id="click-sound" src="sounds/click.mp3"></audio>
+
+  <!-- Welcome screen -->
+  <div id="welcome-screen">
+    <h1>welcome to whateveryouwantwehave!</h1>
+    <button id="enter-btn">click here to enter website</button>
+  </div>
+
+  <!-- Main site -->
+  <div id="main-site" class="hidden">
+    <h2>choose your order type</h2>
+
+    <div class="order-types">
+      <button class="order-type-btn" data-type="classic">Classic orders!</button>
+      <button class="order-type-btn" data-type="complex">Complex orders!</button>
+      <button class="order-type-btn" data-type="custom">Custom order!</button>
+    </div>
+
+    <!-- List of items -->
+    <div id="items-list"></div>
+
+    <!-- Detail box -->
+    <div id="detail-box" class="hidden">
+      <h3 id="detail-title"></h3>
+      <p id="detail-contents"></p>
+      <p id="detail-price"></p>
+      <ul id="detail-affirmations"></ul>
+      <button id="order-btn">order ✨</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
