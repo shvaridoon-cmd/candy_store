@@ -69,7 +69,7 @@ function playAffirmationsTTS(times = 10) {
 
             speechSynthesis.speak(utterance);
         }
-    }
+    
 
     speakNext();
 }
