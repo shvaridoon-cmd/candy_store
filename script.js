@@ -55,10 +55,13 @@ function playAffirmationsTTS(times = 10) {
     function speakNext() {
         if (count < times) {
             const utterance = new SpeechSynthesisUtterance(affirmationsText);
-            utterance.rate = 1;      // speed
-            utterance.pitch = 1;     // tone
-            utterance.volume = 1;    // loudness
 
+            // Whispery female vibe
+            utterance.pitch = 1.4;
+            utterance.rate = 0.85;
+            utterance.volume = 0.6;
+
+            // When one reading finishes, play the next
             utterance.onend = () => {
                 count++;
                 speakNext();
@@ -69,6 +72,8 @@ function playAffirmationsTTS(times = 10) {
     }
 
     speakNext();
+}
+
 }
 
 document.getElementById("enter-btn").addEventListener("click", () => {
