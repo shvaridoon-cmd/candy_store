@@ -14,7 +14,7 @@ const data = {
     },
     {
       name: "Pretty bareface",
-      description: "description: "Who said makeup baddies can't go bareface too! Order this for a beautiful bareface that would make anyone go oh wow!.",
+      description: "Who said makeup baddies can't go bareface too! Order this for a beautiful bareface that would make anyone go \"oh wow!\".",
       contents: "Clear skin, even tone, natural glow, pink lips.",
       price: "Price: free",
       affirmations: [
@@ -23,6 +23,7 @@ const data = {
       ],
     },
   ],
+
   complex: [
     {
       name: "Height change",
@@ -35,6 +36,7 @@ const data = {
       ],
     },
   ],
+
   custom: [
     {
       name: "Custom manifestation",
@@ -49,83 +51,90 @@ const data = {
   ],
 };
 
+// Affirmations text for TTS
+const affirmationsText = `
+I am aligned with everything I desire.
+My manifestations flow to me easily.
+I am magnetic. I am powerful. I am chosen.
+`;
+
+// TTS loop
 function playAffirmationsTTS(times = 10) {
-    let count = 0;
+  let count = 0;
 
-    function speakNext() {
-        if (count < times) {
-            const utterance = new SpeechSynthesisUtterance(affirmationsText);
+  function speakNext() {
+    if (count < times) {
+      const utterance = new SpeechSynthesisUtterance(affirmationsText);
 
-            // Whispery female vibe
-            utterance.pitch = 1.4;
-            utterance.rate = 0.85;
-            utterance.volume = 0.6;
+      // Whispery female vibe
+      utterance.pitch = 1.4;
+      utterance.rate = 0.85;
+      utterance.volume = 0.6;
 
-            // When one reading finishes, play the next
-            utterance.onend = () => {
-                count++;
-                speakNext();
-            };
+      utterance.onend = () => {
+        count++;
+        speakNext();
+      };
 
-            speechSynthesis.speak(utterance);
-        }
-    
+      speechSynthesis.speak(utterance);
+    }
+  }
 
-    speakNext();
+  speakNext();
 }
 
-
-
-document.getElementById("enter-btn").addEventListener("click", () => {
-    document.getElementById("welcome-screen").classList.add("hidden");
-    document.getElementById("main-site").classList.remove("hidden");
+// ENTER BUTTON — show main site
+document.getElementById("enterBtn").addEventListener("click", () => {
+  document.getElementById("welcome-screen").classList.add("hidden");
+  document.getElementById("main-site").classList.remove("hidden");
 });
 
+// Sparkles
 function createFloatingSparkle() {
-    const sparkle = document.createElement("img");
-    sparkle.src = "images/sparkles/tumblr_3f04a478cf7d4a1bf94deb490eb97d70_d045f57f_400.webp";
-    sparkle.classList.add("sparkle");
+  const sparkle = document.createElement("img");
+  sparkle.src = "images/sparkles/tumblr_3f04a478cf7d4a1bf94deb490eb97d70_d045f57f_400.webp";
+  sparkle.classList.add("sparkle");
 
-    sparkle.style.left = Math.random() * window.innerWidth + "px";
-    sparkle.style.top = Math.random() * window.innerHeight + "px";
+  sparkle.style.left = Math.random() * window.innerWidth + "px";
+  sparkle.style.top = Math.random() * window.innerHeight + "px";
 
-    document.body.appendChild(sparkle);
+  document.body.appendChild(sparkle);
 
-    setTimeout(() => sparkle.remove(), 6000);
+  setTimeout(() => sparkle.remove(), 6000);
 }
 
 setInterval(createFloatingSparkle, 800);
 
 document.addEventListener("mousemove", (e) => {
-    const sparkle = document.createElement("img");
-    sparkle.src = "images/sparkles/tumblr_3f04a478cf7d4a1bf94deb490eb97d70_d045f57f_400.webp";
-    sparkle.classList.add("trail-sparkle");
+  const sparkle = document.createElement("img");
+  sparkle.src = "images/sparkles/tumblr_3f04a478cf7d4a1bf94deb490eb97d70_d045f57f_400.webp";
+  sparkle.classList.add("trail-sparkle");
 
-    sparkle.style.left = e.pageX + "px";
-    sparkle.style.top = e.pageY + "px";
+  sparkle.style.left = e.pageX + "px";
+  sparkle.style.top = e.pageY + "px";
 
-    document.body.appendChild(sparkle);
+  document.body.appendChild(sparkle);
 
-    setTimeout(() => sparkle.remove(), 800);
+  setTimeout(() => sparkle.remove(), 800);
 });
 
 document.addEventListener("click", (e) => {
-    const sparkle = document.createElement("img");
-    sparkle.src = "images/sparkles/tumblr_3f04a478cf7d4a1bf94deb490eb97d70_d045f57f_400.webp";
-    sparkle.classList.add("trail-sparkle");
+  const sparkle = document.createElement("img");
+  sparkle.src = "images/sparkles/tumblr_3f04a478cf7d4a1bf94deb490eb97d70_d045f57f_400.webp";
+  sparkle.classList.add("trail-sparkle");
 
-    sparkle.style.left = e.pageX + "px";
-    sparkle.style.top = e.pageY + "px";
+  sparkle.style.left = e.pageX + "px";
+  sparkle.style.top = e.pageY + "px";
 
-    document.body.appendChild(sparkle);
+  document.body.appendChild(sparkle);
 
-    setTimeout(() => sparkle.remove(), 800);
+  setTimeout(() => sparkle.remove(), 800);
 });
 
-
+// DOM elements
 const welcomeScreen = document.getElementById("welcome-screen");
 const mainSite = document.getElementById("main-site");
-const enterBtn = document.getElementById("enter-btn");
+const enterBtn = document.getElementById("enterBtn");
 
 const bgMusic = document.getElementById("bg-music");
 const clickSound = document.getElementById("click-sound");
@@ -143,20 +152,19 @@ enterBtn.addEventListener("click", () => {
   welcomeScreen.classList.add("hidden");
   mainSite.classList.remove("hidden");
 
-  // Play background music (user interaction allows autoplay)
   bgMusic.volume = 1.0;
   bgMusic.play();
 
   playClickSound();
 });
 
-// Play cute click sound
+// Click sound
 function playClickSound() {
   clickSound.currentTime = 0;
   clickSound.play();
 }
 
-// Handle order type buttons
+// Order type buttons
 document.querySelectorAll(".order-type-btn").forEach((btn) => {
   btn.addEventListener("click", () => {
     const type = btn.dataset.type;
@@ -166,7 +174,7 @@ document.querySelectorAll(".order-type-btn").forEach((btn) => {
   });
 });
 
-// Render items list
+// Render items
 function renderItems(type) {
   itemsList.innerHTML = "";
   const items = data[type];
@@ -185,7 +193,6 @@ function renderItems(type) {
     card.appendChild(title);
     card.appendChild(hoverText);
 
-    // Click to open detail box
     card.addEventListener("click", () => {
       playClickSound();
       showDetail(item);
@@ -211,10 +218,9 @@ function showDetail(item) {
   detailBox.classList.remove("hidden");
 }
 
-// Order button (you can add more magic here)
+// Order button
 orderBtn.addEventListener("click", () => {
   playClickSound();
   alert("Order placed in the manifestation universe ✨");
-
   playAffirmationsTTS(10);
 });
