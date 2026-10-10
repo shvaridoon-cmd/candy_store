@@ -117,7 +117,7 @@ enterBtn.addEventListener("click", () => {
   mainSite.classList.remove("hidden");
 
   // Play background music (user interaction allows autoplay)
-  bgMusic.volume = 0.8;
+  bgMusic.volume = 1.0;
   bgMusic.play();
 
   playClickSound();
