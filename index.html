@@ -1,46 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>whateveryouwantwehave</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>whateveryouwantwehave</title>
+
+    <!-- Theme palette (switches between dark/pastel) -->
+    <link id="theme" rel="stylesheet" href="palette-dark.css">
+
+    <!-- Main styling -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <!-- Background music -->
-  <audio id="bg-music" src="music/background.mp3" loop></audio>
 
-  <!-- Cute click sound -->
-  <audio id="click-sound" src="sounds/click.mp3"></audio>
-
-  <!-- Welcome screen -->
-  <div id="welcome-screen">
-    <h1>welcome to whateveryouwantwehave!</h1>
-    <button id="enter-btn">click here to enter website</button>
-  </div>
-
-  <!-- Main site -->
-  <div id="main-site" class="hidden">
-    <h2>choose your order type</h2>
-
-    <div class="order-types">
-      <button class="order-type-btn" data-type="classic">Classic orders!</button>
-      <button class="order-type-btn" data-type="complex">Complex orders!</button>
-      <button class="order-type-btn" data-type="custom">Custom order!</button>
+    <!-- Welcome Screen -->
+    <div id="welcome-screen">
+        <h1>welcome to whateveryouwantwehave!</h1>
+        <button id="enter-btn">click here to enter website</button>
     </div>
 
-    <!-- List of items -->
-    <div id="items-list"></div>
+    <!-- Main Site -->
+    <div id="main-site" class="hidden">
+        <h2>choose your order type</h2>
 
-    <!-- Detail box -->
-    <div id="detail-box" class="hidden">
-      <h3 id="detail-title"></h3>
-      <p id="detail-contents"></p>
-      <p id="detail-price"></p>
-      <ul id="detail-affirmations"></ul>
-      <button id="order-btn">order ✨</button>
+        <div class="order-types">
+            <button class="order-type-btn" data-type="classic">Classic orders!</button>
+            <button class="order-type-btn" data-type="complex">Complex orders!</button>
+            <button class="order-type-btn" data-type="custom">Custom order!</button>
+        </div>
+
+        <!-- Palette Switch Buttons -->
+        <div class="palette-switch">
+            <button onclick="switchPalette('dark')">Dark Palette</button>
+            <button onclick="switchPalette('pastel')">Pastel Palette</button>
+        </div>
+
+        <!-- Items List -->
+        <div id="items-list"></div>
+
+        <!-- Detail Box -->
+        <div id="detail-box" class="hidden">
+            <h3 id="detail-title"></h3>
+            <p id="detail-contents"></p>
+            <p id="detail-price"></p>
+            <ul id="detail-affirmations"></ul>
+            <button id="order-btn">order ✨</button>
+        </div>
     </div>
-  </div>
 
-  <script src="script.js"></script>
+    <!-- Background Music -->
+    <audio id="bg-music" src="music/background.mp3" loop></audio>
+
+    <!-- Click Sound -->
+    <audio id="click-sound" src="sounds/click.mp3"></audio>
+
+    <!-- Affirmation Audio (optional) -->
+    <audio id="affirmation-audio" src="music/affirmation-loop.mp3" loop></audio>
+
+    <script src="script.js"></script>
 </body>
 </html>
