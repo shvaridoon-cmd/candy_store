@@ -32,6 +32,10 @@ body, p, li, button {
     align-items: center;
 }
 
+.hidden {
+    display: none;
+}
+
 
 /* style.css */
 body {
