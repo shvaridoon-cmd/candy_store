@@ -49,6 +49,12 @@ const data = {
   ],
 };
 
+document.getElementById("enter-btn").addEventListener("click", () => {
+    document.getElementById("welcome-screen").classList.add("hidden");
+    document.getElementById("main-site").classList.remove("hidden");
+});
+
+
 const welcomeScreen = document.getElementById("welcome-screen");
 const mainSite = document.getElementById("main-site");
 const enterBtn = document.getElementById("enter-btn");
