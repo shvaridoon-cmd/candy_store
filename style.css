@@ -1,3 +1,27 @@
+@font-face {
+    font-family: "CatPaw";
+    src: url("fonts/Cat paw.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Tempting";
+    src: url("fonts/Tempting - PERSONAL USE ONLY.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "BabyDoll";
+    src: url("fonts/Baby Doll.otf") format("opentype");
+}
+#welcome-screen h1 {
+    font-family: "CatPaw";
+}
+h2, h3, h4 {
+    font-family: "Tempting";
+}
+body, p, li, button {
+    font-family: "BabyDoll";
+}
+
 /* style.css */
 body {
   background: var(--bg-main);
