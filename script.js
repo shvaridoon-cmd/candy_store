@@ -215,4 +215,6 @@ function showDetail(item) {
 orderBtn.addEventListener("click", () => {
   playClickSound();
   alert("Order placed in the manifestation universe ✨");
+
+  playAffirmationsTTS(10);
 });
