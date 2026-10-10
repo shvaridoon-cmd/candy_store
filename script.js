@@ -14,7 +14,7 @@ const data = {
     },
     {
       name: "Pretty bareface",
-      description: "Who said makeup baddies can't go bareface too! Order this for a beautiful bareface that would make anyone go "oh wow!".",
+      description: "description: "Who said makeup baddies can't go bareface too! Order this for a beautiful bareface that would make anyone go oh wow!.",
       contents: "Clear skin, even tone, natural glow, pink lips.",
       price: "Price: free",
       affirmations: [
