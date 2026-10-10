@@ -1,1 +1,120 @@
+/* style.css */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle at top, #ffc0f5, #000000);
+  color: #ffebff;
+}
+
+/* Hide helper */
+.hidden {
+  display: none;
+}
+
+/* Welcome screen */
+#welcome-screen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#enter-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  border: 2px solid #ff8ad4;
+  background: #000000;
+  color: #ffebff;
+  cursor: pointer;
+  box-shadow: 0 0 12px #ff8ad4;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#enter-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ffffff;
+}
+
+/* Main site */
+#main-site {
+  padding: 30px;
+}
+
+/* Order type buttons */
+.order-types {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.order-type-btn {
+  flex: 1;
+  padding: 16px;
+  border-radius: 18px;
+  border: 2px solid #ff8ad4;
+  background: #111111;
+  color: #ffebff;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.order-type-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 18px #ff8ad4;
+}
+
+/* Sparkle effect (simple) */
+.order-type-btn::after {
+  content: "✨";
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  opacity: 0.7;
+}
+
+/* Items list */
+#items-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.item-card {
+  padding: 12px;
+  border-radius: 14px;
+  background: #1a1a1a;
+  border: 1px solid #ff8ad4;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.item-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px #ffffff;
+}
+
+/* Detail box */
+#detail-box {
+  margin-top: 24px;
+  padding: 18px;
+  border-radius: 18px;
+  background: #000000;
+  border: 2px solid #ff8ad4;
+  box-shadow: 0 0 20px #ff8ad4;
+}
+
+#order-btn {
+  margin-top: 12px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: none;
+  background: #ff8ad4;
+  color: #000000;
+  cursor: pointer;
+}
 
