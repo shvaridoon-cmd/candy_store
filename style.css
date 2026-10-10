@@ -1,9 +1,23 @@
 /* style.css */
 body {
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  background: radial-gradient(circle at top, #ffc0f5, #000000);
-  color: #ffebff;
+  background: var(--bg-main);
+  color: var(--text-main);
+}
+
+.order-type-btn {
+  background: var(--button-bg);
+  border: 2px solid var(--button-border);
+  color: var(--text-main);
+}
+
+.item-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--accent);
+}
+
+#detail-box {
+  background: var(--bg-secondary);
+  border: 2px solid var(--accent);
 }
 
 /* Hide helper */
