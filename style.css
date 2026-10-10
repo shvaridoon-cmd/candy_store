@@ -143,6 +143,15 @@ body, p, li, button {
   box-shadow: 0 0 12px #ffffff;
 }
 
+.fade {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.fade.show {
+  opacity: 1;
+}
+
 /* Detail box */
 #detail-box {
   margin-top: 24px;
