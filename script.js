@@ -82,6 +82,20 @@ document.addEventListener("mousemove", (e) => {
     setTimeout(() => sparkle.remove(), 800);
 });
 
+document.addEventListener("click", (e) => {
+    const sparkle = document.createElement("img");
+    sparkle.src = "images/sparkles/tumblr_3f04a478cf7d4a1bf94deb490eb97d70_d045f57f_400.webp";
+    sparkle.classList.add("trail-sparkle");
+
+    sparkle.style.left = e.pageX + "px";
+    sparkle.style.top = e.pageY + "px";
+
+    document.body.appendChild(sparkle);
+
+    setTimeout(() => sparkle.remove(), 800);
+});
+
+
 const welcomeScreen = document.getElementById("welcome-screen");
 const mainSite = document.getElementById("main-site");
 const enterBtn = document.getElementById("enter-btn");
